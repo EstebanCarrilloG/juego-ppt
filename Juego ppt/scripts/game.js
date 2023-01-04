@@ -1,4 +1,4 @@
-export function startGame() {
+export function startGame(options) {
   function getRandomInt(max) {
     // Obtenemos un número aleatorio de  0 a 2
     return Math.floor(Math.random() * max);
@@ -41,7 +41,7 @@ export function startGame() {
     player.innerHTML = imgElement; // Mostramos la imagen del botón pulsado por el usuario
 
     let pcImg = document.createElement("img"); // Creamos un elemento de tipo imagen
-    pcImg.setAttribute("src", `${pcSelectionImg}.jpg`); //
+    pcImg.setAttribute("src", `${pcSelectionImg}`); //
 
     computer.appendChild(pcImg); // Muestra imagen del elemento elegido aleatoriamente por la computadora
 
@@ -59,22 +59,6 @@ export function startGame() {
     playerSelection = "";
     rdnNumber = 0;
   }
-
-  let options = [
-    // Opciones a elegir para la computadora y urls de las imagenes
-    {
-      type: "piedra",
-      url: "https://lh3.googleusercontent.com/-D4ja_od6Sjo/Y54mVun4flI/AAAAAAAAR7w/Afwiv1L_N6gRe2V8JtgyxdzPeGyId7ZIACNcBGAsYHQ/h120/piedra.jpg",
-    },
-    {
-      type: "papel",
-      url: "https://lh3.googleusercontent.com/-0tMGkyW0GyY/Y54mVkQLsTI/AAAAAAAAR70/xIzfaJLtcQQbud-jNJ9RiiDhPpHHtA6nwCNcBGAsYHQ/h120/papel.jpg",
-    },
-    {
-      type: "tijera",
-      url: "https://lh3.googleusercontent.com/-EK9U6H2ysBs/Y54mVmZT-VI/AAAAAAAAR74/HeWmsDooJMw1mqO8GCdZhFwjDDDRw-XKQCNcBGAsYHQ/h120/tijera.jpg",
-    },
-  ];
 
   let buttonPressed = document.querySelectorAll("button.game-btn"); // Selector de elementos tipo Button
 
